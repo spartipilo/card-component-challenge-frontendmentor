@@ -2,6 +2,7 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: #fff;
 }
 
 .attribution a {
@@ -11,11 +12,12 @@
 body {
   background-color: #0d1a2d;
   font-family: "Gothic A1", sans-serif;
+  max-height: 100vh;
 }
 
 .container {
   display: flex;
-  margin: 10% auto;
+  margin: 10% auto 20px;
   background-color: hsl(216, 50%, 16%);
   width: 350px;
   height: 600px;
@@ -33,10 +35,18 @@ body {
   font-size: 20px;
   font-weight: 600;
   color: #fff;
+  width: max-content;
+  transition: 0.5s;
+}
+
+.text__title:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
 }
 .main__image {
   height: 300px;
   border-radius: 25px;
+  transition: 0.5s;
 }
 
 .text__paragraph {
@@ -86,4 +96,36 @@ hr {
   vertical-align: middle;
   margin-left: 10px;
   color: hsl(215, 51%, 70%);
+}
+.hover__image {
+  position: absolute;
+  background-color: hsl(178, 100%, 50%);
+  height: 300px;
+  width: 300px;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.hover__image img {
+  height: 70px;
+}
+
+.hover__image:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.name__jules {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.name__jules:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
 }
